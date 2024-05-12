@@ -1,10 +1,8 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.Linq;
+using Unity.Netcode;
 using UnityEngine;
 
-public class PlayerAnimatorController : MonoBehaviour,IPlayerControllers
+public class PlayerAnimatorController : NetworkBehaviour,IPlayerControllers
 {
    private Animator _animator;
    private Transform _thisTR;
@@ -15,50 +13,52 @@ public class PlayerAnimatorController : MonoBehaviour,IPlayerControllers
    private static readonly int Reload1 = Animator.StringToHash("Reload");
    private static readonly int X = Animator.StringToHash("X");
    private static readonly int Y = Animator.StringToHash("Y");
+   private Vector2 _direction;
 
-   public void Initialise(IPlayerControllers[] playerControllersArray)
+   public void Initialise(IPlayerControllers[] playerControllersArray,bool thisIsOwner)
    {
       _playerController = playerControllersArray.FirstOrDefault(x=>x is PlayerController)as PlayerController;
    }
 
    public void MakeSubscriptions()
    {
-      _playerController.onMoved += SetMove;
-      _playerController.onFire += SetFireState;
+      _playerController.onMovedAndRotation += SetMoveServerRpc;
       _playerController.onGunState += SetGunState;
       _playerController.onReload += Reload;
+      Starting();
    }
 
-   private void Start()
+   private void Starting()
    {
       _animator = GetComponentInChildren<Animator>();
       _thisTR = GetComponent<Transform>();
+      if (_playerController.animatorController)
+         _animator.runtimeAnimatorController = _playerController.animatorController;
    }
 
    private void SetGunState(bool isGunState)
    {
       _animator.SetBool(IsGunState,isGunState);
+      _animator.SetBool(IsFire,isGunState);
    }
-   private void SetFireState(bool isFireState)
-   {
-      _animator.SetBool(IsFire,isFireState);
-   }
+ 
    private void Reload()
    {
       _animator.SetTrigger(Reload1);
    }
-
-   private void SetMove(Vector3 direction)
+   [ServerRpc]
+   private void SetMoveServerRpc(Vector2 move, Vector2 rotate, bool isFire)
    {
-      direction = _thisTR.InverseTransformVector(direction).normalized;
-      _animator.SetFloat(X, direction.x);
-      _animator.SetFloat(Y, direction.y);
+      _direction = _thisTR.InverseTransformVector(move).normalized;
+      _animator.SetFloat(X, _direction.x);
+      _animator.SetFloat(Y, _direction.y);
+      _animator.SetBool(IsGunState,isFire);
+      _animator.SetBool(IsFire,isFire);
    }
 
    private void OnDestroy()
    {
-      _playerController.onMoved -= SetMove;
-      _playerController.onFire -= SetFireState;
+      _playerController.onMovedAndRotation -= SetMoveServerRpc;
       _playerController.onGunState -= SetGunState;
       _playerController.onReload -= Reload;
    }

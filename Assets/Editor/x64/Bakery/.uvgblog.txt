@@ -1,0 +1,125 @@
+2024-5-11
+Rendering UV GBuffer for Start_LM0 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for probes 256
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Done
+Done
+Running ftraceRTX fixpos12 "C:\Users\GuLoNPC\AppData\Local\Temp\frender" "uvpos_Start_LM0.lz4" 2 0 0 0
+Running ftraceRTX batchpointlightprobeshlegacy "C:\Users\GuLoNPC\AppData\Local\Temp\frender" "PointBatch_1_0_109" 1924 0 1 batchpointlight_1_0_109.bin
+Running ftraceRTX addmul "C:\Users\GuLoNPC\AppData\Local\Temp\frender" "probes" 4 0 1 comp_1.bin
+Running ftraceRTX batchpointlightlegacy "C:\Users\GuLoNPC\AppData\Local\Temp\frender" "PointBatch_0_0_109" 4 0 0 batchpointlight_0_0_109.bin
+Running ftraceRTX addmul "C:\Users\GuLoNPC\AppData\Local\Temp\frender" "Start_LM0" 4 0 0 comp_0.bin
+Running ftraceRTX texgi "C:\Users\GuLoNPC\AppData\Local\Temp\frender" "Start_LM0_diffuse" 4 16 0 "gi_Start_LM00.bin" "Start_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\GuLoNPC\AppData\Local\Temp\frender" "Start_LM0_diffuse" 4 16 0 "gi_Start_LM01.bin" "Start_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\GuLoNPC\AppData\Local\Temp\frender" "Start_LM0_diffuse" 4 16 0 "gi_Start_LM02.bin" "Start_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\GuLoNPC\AppData\Local\Temp\frender" "Start_LM0_diffuse" 4 16 0 "gi_Start_LM03.bin" "Start_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgiprobesh "C:\Users\GuLoNPC\AppData\Local\Temp\frender" "probes_final" 1924 16 1 "gi_probes4.bin" "probes_lights_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\GuLoNPC\AppData\Local\Temp\frender" "Start_LM0_final" 4 16 0 "gi_Start_LM04.bin" "Start_LM0_lights_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX addsh "C:\Users\GuLoNPC\AppData\Local\Temp\frender" "probes_final_" 4 0 1 shcomp_1.bin
+Running denoiserOIDN2 c "C:\Users\GuLoNPC\AppData\Local\Temp\frender/Start_LM0_final_HDR.lz4" "C:\Users\GuLoNPC\AppData\Local\Temp\frender/Start_LM0_final_HDR.lz4" 512 0
+Running seamfixer "C:\Users\GuLoNPC\AppData\Local\Temp\frender" "0" "Start_LM0_final_HDR.lz4"
+Running halffloat2hdr "C:\Users\GuLoNPC\AppData\Local\Temp\frender/Start_LM0_final_HDR.lz4" "D:/Unity/WaW.MVP/Assets/BakeryLightmaps/Start_LM0_final.hdr" 1024
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Done
+Done
+Done
+Done
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+initScene done
+Done
+Rendering UV GBuffer for Start_LM0 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Done
+Done
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+initScene done
+Done
+Rendering UV GBuffer for Start_LM0 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for probes 256
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Done
+Done
+Running ftraceRTX fixpos12 "C:\Users\GuLoNPC\AppData\Local\Temp\frender" "uvpos_Start_LM0.lz4" 2 0 0 0
+Running ftraceRTX batchpointlightprobeshlegacy "C:\Users\GuLoNPC\AppData\Local\Temp\frender" "PointBatch_1_0_109" 1924 0 1 batchpointlight_1_0_109.bin
+Running ftraceRTX addmul "C:\Users\GuLoNPC\AppData\Local\Temp\frender" "probes" 4 0 1 comp_1.bin
+Running ftraceRTX batchpointlightlegacy "C:\Users\GuLoNPC\AppData\Local\Temp\frender" "PointBatch_0_0_109" 4 0 0 batchpointlight_0_0_109.bin
+Running ftraceRTX addmul "C:\Users\GuLoNPC\AppData\Local\Temp\frender" "Start_LM0" 4 0 0 comp_0.bin
+Running ftraceRTX texgi "C:\Users\GuLoNPC\AppData\Local\Temp\frender" "Start_LM0_diffuse" 4 16 0 "gi_Start_LM00.bin" "Start_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\GuLoNPC\AppData\Local\Temp\frender" "Start_LM0_diffuse" 4 16 0 "gi_Start_LM01.bin" "Start_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\GuLoNPC\AppData\Local\Temp\frender" "Start_LM0_diffuse" 4 16 0 "gi_Start_LM02.bin" "Start_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\GuLoNPC\AppData\Local\Temp\frender" "Start_LM0_diffuse" 4 16 0 "gi_Start_LM03.bin" "Start_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgiprobesh "C:\Users\GuLoNPC\AppData\Local\Temp\frender" "probes_final" 1924 16 1 "gi_probes4.bin" "probes_lights_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\GuLoNPC\AppData\Local\Temp\frender" "Start_LM0_final" 4 16 0 "gi_Start_LM04.bin" "Start_LM0_lights_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX addsh "C:\Users\GuLoNPC\AppData\Local\Temp\frender" "probes_final_" 4 0 1 shcomp_1.bin
+Running denoiserOIDN c "C:\Users\GuLoNPC\AppData\Local\Temp\frender/Start_LM0_final_HDR.lz4" "C:\Users\GuLoNPC\AppData\Local\Temp\frender/Start_LM0_final_HDR.lz4" 2048 0
+Running denoiserOIDN c "C:\Users\GuLoNPC\AppData\Local\Temp\frender/Start_LM0_final_HDR.lz4" "C:\Users\GuLoNPC\AppData\Local\Temp\frender/Start_LM0_final_HDR.lz4" 1024 0
+Running seamfixer "C:\Users\GuLoNPC\AppData\Local\Temp\frender" "0" "Start_LM0_final_HDR.lz4"
+Running halffloat2hdr "C:\Users\GuLoNPC\AppData\Local\Temp\frender/Start_LM0_final_HDR.lz4" "D:/Unity/WaW.MVP/Assets/BakeryLightmaps/Start_LM0_final.hdr" 1024
+Symbol file LoadedFromMemory is not a mono symbol file
+Done
+Done
+Done
+Done
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+initScene done
+Done
+Rendering UV GBuffer for Start_LM0 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for probes 256
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Done
+Done
+Running ftraceRTX fixpos12 "C:\Users\GuLoNPC\AppData\Local\Temp\frender" "uvpos_Start_LM0.lz4" 2 0 0 0
+Running ftraceRTX batchpointlightprobeshlegacy "C:\Users\GuLoNPC\AppData\Local\Temp\frender" "PointBatch_1_0_109" 1924 0 1 batchpointlight_1_0_109.bin
+Running ftraceRTX addmul "C:\Users\GuLoNPC\AppData\Local\Temp\frender" "probes" 4 0 1 comp_1.bin
+Running ftraceRTX batchpointlightlegacy "C:\Users\GuLoNPC\AppData\Local\Temp\frender" "PointBatch_0_0_109" 4 0 0 batchpointlight_0_0_109.bin
+Running ftraceRTX addmul "C:\Users\GuLoNPC\AppData\Local\Temp\frender" "Start_LM0" 4 0 0 comp_0.bin
+Running ftraceRTX texgi "C:\Users\GuLoNPC\AppData\Local\Temp\frender" "Start_LM0_diffuse" 4 16 0 "gi_Start_LM00.bin" "Start_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\GuLoNPC\AppData\Local\Temp\frender" "Start_LM0_diffuse" 4 16 0 "gi_Start_LM01.bin" "Start_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\GuLoNPC\AppData\Local\Temp\frender" "Start_LM0_diffuse" 4 16 0 "gi_Start_LM02.bin" "Start_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\GuLoNPC\AppData\Local\Temp\frender" "Start_LM0_diffuse" 4 16 0 "gi_Start_LM03.bin" "Start_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgiprobesh "C:\Users\GuLoNPC\AppData\Local\Temp\frender" "probes_final" 1924 16 1 "gi_probes4.bin" "probes_lights_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\GuLoNPC\AppData\Local\Temp\frender" "Start_LM0_final" 4 16 0 "gi_Start_LM04.bin" "Start_LM0_lights_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX addsh "C:\Users\GuLoNPC\AppData\Local\Temp\frender" "probes_final_" 4 0 1 shcomp_1.bin
+Running denoiserOIDN c "C:\Users\GuLoNPC\AppData\Local\Temp\frender/Start_LM0_final_HDR.lz4" "C:\Users\GuLoNPC\AppData\Local\Temp\frender/Start_LM0_final_HDR.lz4" 2048 0
+Running denoiserOIDN c "C:\Users\GuLoNPC\AppData\Local\Temp\frender/Start_LM0_final_HDR.lz4" "C:\Users\GuLoNPC\AppData\Local\Temp\frender/Start_LM0_final_HDR.lz4" 1024 0
+Running seamfixer "C:\Users\GuLoNPC\AppData\Local\Temp\frender" "0" "Start_LM0_final_HDR.lz4"
+Running halffloat2hdr "C:\Users\GuLoNPC\AppData\Local\Temp\frender/Start_LM0_final_HDR.lz4" "D:/Unity/WaW.MVP/Assets/BakeryLightmaps/Start_LM0_final.hdr" 1024
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+abort_threads: Failed aborting id: 00000000000051A0, mono_thread_manage will ignore it
+
+abort_threads: Failed aborting id: 00000000000051A0, mono_thread_manage will ignore it
+
+Done
+Done
+Done
+Done

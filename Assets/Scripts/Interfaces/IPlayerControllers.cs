@@ -4,6 +4,6 @@ using UnityEngine;
 
 public interface IPlayerControllers
 {
-   void Initialise(IPlayerControllers[] playerControllersArray);
+   void Initialise(IPlayerControllers[] playerControllersArray, bool thisOwner);
    void MakeSubscriptions();
 }

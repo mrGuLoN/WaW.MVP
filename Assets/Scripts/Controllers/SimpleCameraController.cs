@@ -10,12 +10,17 @@ public class SimpleCameraController : MonoBehaviour
     void Start()
     {
         _thisTR = GetComponent<Transform>();
-        _direction = _player.position - _thisTR.position;
     }
 
+    public void SetTarget(Transform target)
+    {
+        _player = target;
+        _direction = _player.position - _thisTR.position;
+    }
     // Update is called once per frame
     void LateUpdate()
     {
-        _thisTR.position = _player.position - _direction;
+        if (_player)
+            _thisTR.position = _player.position - _direction;
     }
 }
