@@ -17,6 +17,6 @@ public class PlayerState
     public virtual void ExitState() { }
     public virtual void FrameUpdate() { }
     public virtual void FixFrameUpdate() { }
-    public virtual void LateUpdate() { }
+    public virtual void LateFrameUpdate() { }
     public virtual void AnimationEvent(AnimationTriggerType animationEvent) { }
 }

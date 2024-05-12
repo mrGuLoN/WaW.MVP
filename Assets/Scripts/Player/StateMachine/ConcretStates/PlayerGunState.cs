@@ -29,7 +29,7 @@ public class PlayerGunState : PlayerState
         _playerController.currentGun.currentFireState.DoFixUpdateLogic();
     }
 
-    public override void LateUpdate()
+    public override void LateFrameUpdate()
     {
         _playerController.currentGun.currentFireState.DoLateUpdateLogic();
     }

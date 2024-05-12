@@ -11,7 +11,8 @@ public class BaseNonFireSO : BaseStateSO
 
     public override void DoEnterLogic()
     {
-        _playerAnimatorController.SetGunState(false);
+        _playerController.speedCoff = _speedCoff;
+        _playerController.onGunState?.Invoke(0);
     }
 
     public override void DoExitLogic()
@@ -21,8 +22,7 @@ public class BaseNonFireSO : BaseStateSO
 
     public override void DoUpdateLogic()
     {
-        if (_playerCanvasController.fireJ.Direction != Vector2.zero) ;
-
+        if (_playerCanvasController.fireJ.Direction != Vector2.zero) _playerController.PlayerStateMachine.ChangeState(_playerController.PlayerGunState);
     }
 
     public override void DoFixUpdateLogic()

@@ -20,12 +20,19 @@ public class BaseGunController : NetworkBehaviour
     
     
   
-    public void Initialize()
+    public void Initialize(IPlayerControllers[] playerControllersArray)
     {
         if (!_currentNonFireState)
+        {
             _currentNonFireState = Instantiate(_nonFireState);
+            _currentNonFireState.Initialize(playerControllersArray);
+        }
+
         if (!_currentFireState)
+        {
             _currentFireState = Instantiate(_fireState);
+            _currentFireState.Initialize(playerControllersArray);
+        }
     }
 
     private void OnDestroy()

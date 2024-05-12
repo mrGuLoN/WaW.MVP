@@ -9,7 +9,6 @@ public class PlayerAnimatorController : NetworkBehaviour,IPlayerControllers
    private PlayerController _playerController;
    
    private static readonly int IsGunState = Animator.StringToHash("IsGunState");
-   private static readonly int IsFire = Animator.StringToHash("isFire");
    private static readonly int Reload1 = Animator.StringToHash("Reload");
    private static readonly int X = Animator.StringToHash("X");
    private static readonly int Y = Animator.StringToHash("Y");
@@ -23,7 +22,7 @@ public class PlayerAnimatorController : NetworkBehaviour,IPlayerControllers
    public void MakeSubscriptions()
    {
       _playerController.onMovedAndRotation += SetMoveServerRpc;
-      _playerController.onGunState += SetGunState;
+      _playerController.onGunState += SetGunStateServerRpc;
       _playerController.onReload += Reload;
       Starting();
    }
@@ -35,10 +34,11 @@ public class PlayerAnimatorController : NetworkBehaviour,IPlayerControllers
       if (_playerController.animatorController)
          _animator.runtimeAnimatorController = _playerController.animatorController;
    }
-
-   public void SetGunState(bool isGunState)
+   [ServerRpc]
+   private void SetGunStateServerRpc(int isGunState)
    {
-      _animator.SetBool(IsFire,isGunState);
+      Debug.Log(isGunState);
+      _animator.SetInteger(IsGunState,isGunState);
    }
  
    private void Reload()
@@ -56,7 +56,7 @@ public class PlayerAnimatorController : NetworkBehaviour,IPlayerControllers
    private void OnDestroy()
    {
       _playerController.onMovedAndRotation -= SetMoveServerRpc;
-      _playerController.onGunState -= SetGunState;
+      _playerController.onGunState -= SetGunStateServerRpc;
       _playerController.onReload -= Reload;
    }
 }

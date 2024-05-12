@@ -8,10 +8,12 @@ using UnityEngine.Serialization;
 public class PlayerController : NetworkBehaviour, IDamagable, IMovable,IPlayerControllers
 {
     public Action<Vector2,Vector2> onMovedAndRotation;
-    public Action<bool> onGunState;
+    public Action<int> onGunState;
     public Action onReload;
 
     public AnimatorOverrideController animatorController=>_animatorController;
+
+    public float speedCoff =1;
     
     [SerializeField] private float _speed;
     [SerializeField] private AnimatorOverrideController _animatorController;
@@ -24,11 +26,18 @@ public class PlayerController : NetworkBehaviour, IDamagable, IMovable,IPlayerCo
     private Rigidbody2D _rb;
     private Vector2 _inputDirection;
     private Transform _thisTR;
+    private IPlayerControllers[] _controllers;
     
 
     #region StateMachine
 
+    public PlayerStateMachine PlayerStateMachine => _playerStateMachine;
+    public PlayerGunState PlayerGunState => _playerGunState;
+    public PlayerNonGunState PlayerNonGunState => _playerNonGunState;
     
+    private PlayerStateMachine _playerStateMachine;
+    private PlayerGunState _playerGunState;
+    private PlayerNonGunState _playerNonGunState;
 
     #endregion
 
@@ -38,19 +47,24 @@ public class PlayerController : NetworkBehaviour, IDamagable, IMovable,IPlayerCo
     {
         _rb = GetComponent<Rigidbody2D>();
         _thisTR = GetComponent<Transform>();
-        var controllers = GetComponents<IPlayerControllers>();
-        foreach (var controller in controllers)
+        _controllers = GetComponents<IPlayerControllers>();
+        foreach (var controller in _controllers)
         {
-            controller.Initialise(controllers, IsOwner);
+            controller.Initialise(_controllers, IsOwner);
         }
-        foreach (var controller in controllers)
+        foreach (var controller in _controllers)
         {
             controller.MakeSubscriptions();
         }
         
         Debug.Log(IsOwner);
+        
         RespawnGunsOnStart();
         if (!IsOwner) return;
+        _playerStateMachine = new PlayerStateMachine();
+        _playerGunState = new PlayerGunState(this, _playerStateMachine);
+        _playerNonGunState = new PlayerNonGunState(this, _playerStateMachine);
+        _playerStateMachine.Initialize(_playerNonGunState);
         Camera.main.GetComponent<SimpleCameraController>().SetTarget(transform);
     }
 
@@ -65,10 +79,11 @@ public class PlayerController : NetworkBehaviour, IDamagable, IMovable,IPlayerCo
         _passiveGun = Instantiate(_secondGun,_gunPositions.FirstOrDefault(x=>x.namePosition==_secondGun.notActivePosition)?.transformPosition );
         _passiveGun.transform.localRotation = Quaternion.Euler(0,0,0);
         _passiveGun.transform.localPosition = Vector3.zero;
+        
         if (IsOwner)
         {
-            _activeGun.Initialize();
-            _passiveGun.Initialize();
+            _activeGun.Initialize(_controllers);
+            _passiveGun.Initialize(_controllers);
         }
     }
 
@@ -101,7 +116,7 @@ public class PlayerController : NetworkBehaviour, IDamagable, IMovable,IPlayerCo
 
     private void MoveAndRotation(Vector2 move, Vector2 rotate)
     {
-        _rb.velocity = move.normalized * _speed;
+        _rb.velocity = move.normalized * _speed*speedCoff;
         if (rotate != Vector2.zero)
         {
             _thisTR.up = rotate;
@@ -125,6 +140,34 @@ public class PlayerController : NetworkBehaviour, IDamagable, IMovable,IPlayerCo
         }
     }
    
+
+    #endregion
+
+    #region StateMachineMethods
+
+    public void AnimationTriggerEvent(AnimationTriggerType animationTriggerType)
+    {
+        if (!IsOwner) return;
+        PlayerStateMachine.CurrentPlayerState.AnimationEvent(animationTriggerType);
+    }
+
+    private void Update()
+    {
+        if (!IsOwner) return;
+        PlayerStateMachine.CurrentPlayerState.FrameUpdate();
+    }
+
+    private void FixedUpdate()
+    {
+        if (!IsOwner) return;
+        PlayerStateMachine.CurrentPlayerState.FixFrameUpdate();
+    }
+
+    private void LateUpdate()
+    {
+        if (!IsOwner) return;
+        PlayerStateMachine.CurrentPlayerState.LateFrameUpdate();
+    }
 
     #endregion
 }

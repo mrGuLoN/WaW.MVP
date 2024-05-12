@@ -8,8 +8,9 @@ OcclusionCullingSettings:
     smallestOccluder: 5
     smallestHole: 0.25
     backfaceThreshold: 100
-  m_SceneGUID: 00000000000000000000000000000000
-  m_OcclusionCullingData: {fileID: 0}
+  m_SceneGUID: c850ee8c3b14cc8459e7e186857cf567
+  m_OcclusionCullingData: {fileID: 36300000, guid: 5362a3581dac14d469217b3ca501bb93,
+    type: 2}
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
@@ -78193,7 +78194,7 @@ MonoBehaviour:
     EnableNetworkLogs: 1
     OldPrefabList: []
   RunInBackground: 1
-  LogLevel: 0
+  LogLevel: 3
 --- !u!4 &340783325
 Transform:
   m_ObjectHideFlags: 0

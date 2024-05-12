@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f5e92e96c536cc4abeb4ebc6fe10e44, type: 3}
   m_Name: BaseNonFireState
   m_EditorClassIdentifier: 
-  _speed: 3
+  _speedCoff: 1

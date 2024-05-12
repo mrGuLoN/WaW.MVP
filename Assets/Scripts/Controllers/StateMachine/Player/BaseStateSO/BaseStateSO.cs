@@ -1,9 +1,10 @@
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class BaseStateSO : ScriptableObject
 {
-    [SerializeField] protected float _speed;
+    [SerializeField] protected float _speedCoff;
     protected Transform _playerTransform;
     protected PlayerController _playerController;
     protected PlayerAnimatorController _playerAnimatorController;
