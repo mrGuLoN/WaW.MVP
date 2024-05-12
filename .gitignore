@@ -69,3 +69,5 @@ crashlytics-build.properties
 
 Assets/_Images/UI/**/Thumbs.db
 Assets/_Images/UI/**/Thumbs.db.meta
+Assets/Bakery
+Assets/Editor/x64/Bakery
