@@ -36,9 +36,8 @@ public class PlayerAnimatorController : NetworkBehaviour,IPlayerControllers
          _animator.runtimeAnimatorController = _playerController.animatorController;
    }
 
-   private void SetGunState(bool isGunState)
+   public void SetGunState(bool isGunState)
    {
-      _animator.SetBool(IsGunState,isGunState);
       _animator.SetBool(IsFire,isGunState);
    }
  
@@ -47,13 +46,11 @@ public class PlayerAnimatorController : NetworkBehaviour,IPlayerControllers
       _animator.SetTrigger(Reload1);
    }
    [ServerRpc]
-   private void SetMoveServerRpc(Vector2 move, Vector2 rotate, bool isFire)
+   private void SetMoveServerRpc(Vector2 move, Vector2 rotate)
    {
       _direction = _thisTR.InverseTransformVector(move).normalized;
       _animator.SetFloat(X, _direction.x);
       _animator.SetFloat(Y, _direction.y);
-      _animator.SetBool(IsGunState,isFire);
-      _animator.SetBool(IsFire,isFire);
    }
 
    private void OnDestroy()

@@ -19,15 +19,13 @@ public class BaseGunController : NetworkBehaviour
     private BaseFireSO _currentFireState; 
     
     
-    [ServerRpc]
-    public void InitializeServerRpc()
+  
+    public void Initialize()
     {
         if (!_currentNonFireState)
             _currentNonFireState = Instantiate(_nonFireState);
         if (!_currentFireState)
             _currentFireState = Instantiate(_fireState);
-        transform.localRotation = Quaternion.Euler(0,0,0);
-        transform.localPosition = Vector3.zero;
     }
 
     private void OnDestroy()
