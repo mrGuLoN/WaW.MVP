@@ -17,8 +17,52 @@ MonoBehaviour:
   modifiedMeshList: []
   modifiedMeshPaddingList: 
   modifiedAssets: []
-  assetList: []
-  uvOverlapAssetList: 
+  assetList:
+  - Assets/FreeAssets/Zombie/Animations/Zombie@Z_Attack.FBX
+  - Assets/NetcodePlus/Demo/Models/Anims/character@walk.fbx
+  - Assets/FreeAssets/Zombie/Animations/Zombie@Z_Run.FBX
+  - Assets/FreeAssets/Zombie/Animations/Zombie@Z_FallingBack.FBX
+  - Assets/NetcodePlus/Demo/Models/Anims/character@craft.fbx
+  - Assets/NetcodePlus/Demo/Models/Anims/character@attack.fbx
+  - Assets/NetcodePlus/Demo/Models/Anims/character@swimming.fbx
+  - Assets/FreeAssets/Zombie/Animations/Zombie@Z_FallingForward.FBX
+  - Assets/FreeAssets/Zombie/Animations/Zombie@Z_Walk.FBX
+  - Assets/FreeAssets/Zombie/Animations/Zombie@Z_Run_InPlace.FBX
+  - Assets/NetcodePlus/Demo/Models/Anims/character@ladder-climb.fbx
+  - Assets/NetcodePlus/Demo/Models/Anims/character@ladder-idle.fbx
+  - Assets/NetcodePlus/Demo/Models/Anims/character@death.fbx
+  - Assets/FreeAssets/Zombie/Animations/Zombie@Z_Idle.FBX
+  - Assets/FreeAssets/Zombie/Animations/Zombie@Z_Walk1.FBX
+  - Assets/NetcodePlus/Demo/Models/Anims/character@run.fbx
+  - Assets/NetcodePlus/Demo/Models/Anims/character@take.fbx
+  - Assets/NetcodePlus/Demo/Models/Anims/character@idle.fbx
+  - Assets/FreeAssets/Zombie/Animations/Zombie@Z_Walk1_InPlace.FBX
+  - Assets/NetcodePlus/Demo/Models/Arrow.fbx
+  - Assets/NetcodePlus/Demo/Models/tank.fbx
+  - Assets/NetcodePlus/Demo/Models/tower3.fbx
+  - Assets/NetcodePlus/Demo/Models/PowerupLightning.fbx
+  - Assets/NetcodePlus/Demo/Models/CubeBrick.fbx
+  - Assets/NetcodePlus/Demo/Models/tower2.fbx
+  - Assets/NetcodePlus/Demo/Models/Walls.fbx
+  - Assets/NetcodePlus/Demo/Models/Stone_Box.fbx
+  - Assets/NetcodePlus/Demo/Models/Stone_Box_2.fbx
+  - Assets/NetcodePlus/Demo/Models/PowerupCross.fbx
+  - Assets/NetcodePlus/Demo/Models/Swinging_Axe.fbx
+  - Assets/NetcodePlus/Demo/Models/CubeWood.fbx
+  - Assets/NetcodePlus/Demo/Models/AdventurerBoy.fbx
+  - Assets/NetcodePlus/Demo/Models/Trap.fbx
+  - Assets/NetcodePlus/Demo/Models/AdventurerGirl.fbx
+  - Assets/NetcodePlus/Demo/Models/tower.fbx
+  - Assets/NetcodePlus/Demo/Models/Lever.fbx
+  - Assets/NetcodePlus/Demo/Models/CubeWood3.fbx
+  - Assets/NetcodePlus/Demo/Models/Slide_Door.fbx
+  - Assets/NetcodePlus/Demo/Models/Monkey_Statue.fbx
+  - Assets/NetcodePlus/Demo/Models/Foot_Switch.fbx
+  - Assets/NetcodePlus/Demo/Models/CubeWood2.fbx
+  - Assets/NetcodePlus/Demo/Models/Key.fbx
+  - Assets/NetcodePlus/Demo/Models/Key_Door.fbx
+  - Assets/FreeAssets/Wolf3D/RPM Avatar Pack/Models/Scene/BG_drop.fbx
+  uvOverlapAssetList: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000000000000010100000000000001010000010100000101000001010000010100000101000001010000010100000101000000000000
   xatlasWarningShown: 0
   foundCompatibleSetup: 0
   gpuName: 
