@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e400dbafd83e37349a2cc093ec3d4c17, type: 3}
+  m_Name: GlobalGameSettings
+  m_EditorClassIdentifier: 
+  stagesForDifficultyJump: 5
+  upEnemyInWave: 0.2
+  upEnemyInMap: 0.1
+  baseCostCoff: 1
+  baseHealthCoff: 1
+  baseDamageCoff: 1
+  baseCostUp: 0.1
+  baseHealthUp: 0.1
+  baseDamageUp: 0.1
+  absoluteMaxEnemiesOnScreen: 100
+  enemyAppearanceSettings:
+  - enemyType: 0
+    appearFromStage: 0
+    appearFromWave: 0
+  bossAppearanceSettings: []

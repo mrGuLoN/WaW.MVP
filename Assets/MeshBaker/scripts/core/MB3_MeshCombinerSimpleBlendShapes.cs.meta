@@ -9,3 +9,10 @@ MonoImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 31895
+  packageName: Mesh Baker Free
+  packageVersion: 3.32.1
+  assetPath: Assets/MeshBaker/scripts/core/MB3_MeshCombinerSimpleBlendShapes.cs
+  uploadId: 401663

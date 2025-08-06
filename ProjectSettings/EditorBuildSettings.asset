@@ -6,8 +6,23 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Start.unity
-    guid: c850ee8c3b14cc8459e7e186857cf567
+    path: Assets/Arena/Arena.unity
+    guid: 8f77d4585d62e39499904c0b8aca887c
   m_configObjects:
+    AR Foundation RemoteARFoundationRemoteLoaderSettings: {fileID: 11400000, guid: 6b450e091d4548b4693deb325043ec23,
+      type: 2}
+    AR Foundation RemoteARFoundationRemoteSessionRecordsData: {fileID: 11400000, guid: 93a615e73db21c848b4a2b9c17d47b4a,
+      type: 2}
+    UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: f6c3fb065a9167a459a2022b0ecd3d45,
+      type: 2}
+    com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000,
+      guid: bf1bd6b2e4cfbf14c9101fc5802cf818, type: 2}
+    com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 8fa64634f08a1b141ac2e2d7aa47693b,
+      type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000,
-      guid: 6f5d0c46a262aa4469d15912879f0e69, type: 2}
+      guid: 1024ca759e5749b4f8cf9337f956c6a7, type: 2}
+    com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: 548bf1be54a02a940bec32dffcfaa9f5,
+      type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 8f4263351c73d9b43b92e58925d55746,
+      type: 2}
+  m_UseUCBPForAssetBundles: 0

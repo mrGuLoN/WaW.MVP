@@ -12,5 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05ca84e725c7c764aa5ed097918d14b7, type: 3}
   m_Name: ftLocalStorage
   m_EditorClassIdentifier: 
-  modifiedAssetPathList: []
-  modifiedAssetPaddingHash: 
+  modifiedAssetPathList:
+  - Assets/Bakery/examples/content/sponza/sponza.FBX
+  - Assets/Sci-Fi Styled Modular Pack/Models/wall_small_no_side_full_LOD0.fbx
+  - Assets/Sci-Fi Styled Modular Pack/Models/window_big_blocker.fbx
+  - Assets/Sci-Fi Styled Modular Pack/Models/floor_6.fbx
+  modifiedAssetPaddingHash: d6a958ff14f33a063c4efff04adc894b

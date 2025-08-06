@@ -1,0 +1,70 @@
+#version 330 core
+
+// Входные параметры
+layout(location = 0) in vec3 aPos; // Позиция вершин
+layout(location = 1) in vec2 aTexCoord; // UV координаты
+layout(location = 2) in vec3 aNormal; // Нормали
+
+// Выходные параметры
+out vec2 TexCoord;
+out vec3 FragPos;
+out vec3 Normal;
+
+// Установленные uniform переменные
+uniform sampler2D u_MainTex; // Основная текстура
+uniform vec3 u_LightPositions[10]; // Массив позиций источников света
+uniform vec4 u_LightColors[10]; // Массив цветов источников света
+uniform vec2 u_RangeIntensityBuffer[10]; // Массив диапазонов и интенсивностей
+uniform float u_MaxLights; // Максимальное количество источников света
+uniform float u_LightPower; // Мощность света
+uniform float u_ShadowPower; // Мощность теней
+
+void main()
+{
+    // Преобразуем координаты
+    TexCoord = aTexCoord;
+    FragPos = aPos;
+    Normal = normalize(aNormal);
+
+    vec3 finalColor = vec3(0.0);
+
+    // Проходим по всем источникам света
+    for (int index = 0; index < int(u_MaxLights); index++)
+    {
+        vec3 lightPos = u_LightPositions[index];
+        vec4 lightColor = u_LightColors[index];
+        vec2 lightRangeIntensity = u_RangeIntensityBuffer[index];
+
+        // Вычисляем вектор от источника света до текущей позиции
+        vec3 lightDir = lightPos - FragPos;
+        float distanceSquared = dot(lightDir, lightDir); // Квадрат расстояния
+        float maxDistanceSquared = lightRangeIntensity.x * lightRangeIntensity.x; // Квадрат максимального расстояния
+
+        // Проверяем, не превышает ли квадрат расстояния максимальный квадрат расстояния
+        if (distanceSquared < maxDistanceSquared)
+        {
+            // Нормализуем направление света
+            lightDir = normalize(lightDir);
+
+            // Вычисляем интенсивность освещения с учетом расстояния
+            float attenuation = clamp(1.0 - (sqrt(distanceSquared) / lightRangeIntensity.x), 0.0, 1.0) * lightRangeIntensity.y; // Затухание
+
+            // Вычисляем угол между нормалью и направлением света
+            float angle = dot(Normal, lightDir);
+            float influence = 0.0;
+
+            // Определяем влияние света на основе угла
+            if (angle > 0.0) // Нормаль и направление света в одном направлении
+            {
+                influence = 0.1 + u_LightPower * angle; // Смешиваем влияние
+            }
+            influence = mix(1.0, influence, u_ShadowPower); // Плавный переход
+
+            // Учитываем затухание и комбинируем цвет освещения с цветом текстуры
+            finalColor += lightColor.rgb * influence * attenuation * texture(u_MainTex, TexCoord).rgb;
+        }
+    }
+
+    // Возвращаем итоговый цвет
+    gl_FragColor = vec4(finalColor, texture(u_MainTex, TexCoord).a); // Сохраняем альфа-канал
+}
