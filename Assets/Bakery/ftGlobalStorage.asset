@@ -12,62 +12,126 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c789d55c4f1cff34799abba03737e8f7, type: 3}
   m_Name: ftGlobalStorage
   m_EditorClassIdentifier: 
-  modifiedAssetPathList: []
-  modifiedAssetPaddingHash: 
+  modifiedAssetPathList:
+  - Assets/Sci-Fi Styled Modular Pack/Models/wall_small_no_side_full_LOD0.fbx
+  - Assets/Sci-Fi Styled Modular Pack/Models/window_big_blocker.fbx
+  - Assets/Sci-Fi Styled Modular Pack/Models/floor_6.fbx
+  modifiedAssetPaddingHash: 14f33a063c4efff04adc894b
   modifiedMeshList: []
   modifiedMeshPaddingList: 
-  modifiedAssets: []
+  modifiedAssets:
+  - meshName:
+    - wall_small_no_side_full_LOD0
+    padding: 0a000000
+    unwrapper: 00000000
+  - meshName:
+    - window_big_blocker
+    padding: 12000000
+    unwrapper: 00000000
+  - meshName:
+    - floor_6
+    padding: 10000000
+    unwrapper: 00000000
   assetList:
-  - Assets/FreeAssets/Zombie/Animations/Zombie@Z_Attack.FBX
-  - Assets/NetcodePlus/Demo/Models/Anims/character@walk.fbx
-  - Assets/FreeAssets/Zombie/Animations/Zombie@Z_Run.FBX
-  - Assets/FreeAssets/Zombie/Animations/Zombie@Z_FallingBack.FBX
-  - Assets/NetcodePlus/Demo/Models/Anims/character@craft.fbx
-  - Assets/NetcodePlus/Demo/Models/Anims/character@attack.fbx
-  - Assets/NetcodePlus/Demo/Models/Anims/character@swimming.fbx
-  - Assets/FreeAssets/Zombie/Animations/Zombie@Z_FallingForward.FBX
-  - Assets/FreeAssets/Zombie/Animations/Zombie@Z_Walk.FBX
-  - Assets/FreeAssets/Zombie/Animations/Zombie@Z_Run_InPlace.FBX
-  - Assets/NetcodePlus/Demo/Models/Anims/character@ladder-climb.fbx
-  - Assets/NetcodePlus/Demo/Models/Anims/character@ladder-idle.fbx
-  - Assets/NetcodePlus/Demo/Models/Anims/character@death.fbx
-  - Assets/FreeAssets/Zombie/Animations/Zombie@Z_Idle.FBX
-  - Assets/FreeAssets/Zombie/Animations/Zombie@Z_Walk1.FBX
-  - Assets/NetcodePlus/Demo/Models/Anims/character@run.fbx
-  - Assets/NetcodePlus/Demo/Models/Anims/character@take.fbx
-  - Assets/NetcodePlus/Demo/Models/Anims/character@idle.fbx
-  - Assets/FreeAssets/Zombie/Animations/Zombie@Z_Walk1_InPlace.FBX
-  - Assets/NetcodePlus/Demo/Models/Arrow.fbx
-  - Assets/NetcodePlus/Demo/Models/tank.fbx
-  - Assets/NetcodePlus/Demo/Models/tower3.fbx
-  - Assets/NetcodePlus/Demo/Models/PowerupLightning.fbx
-  - Assets/NetcodePlus/Demo/Models/CubeBrick.fbx
-  - Assets/NetcodePlus/Demo/Models/tower2.fbx
-  - Assets/NetcodePlus/Demo/Models/Walls.fbx
-  - Assets/NetcodePlus/Demo/Models/Stone_Box.fbx
-  - Assets/NetcodePlus/Demo/Models/Stone_Box_2.fbx
-  - Assets/NetcodePlus/Demo/Models/PowerupCross.fbx
-  - Assets/NetcodePlus/Demo/Models/Swinging_Axe.fbx
-  - Assets/NetcodePlus/Demo/Models/CubeWood.fbx
-  - Assets/NetcodePlus/Demo/Models/AdventurerBoy.fbx
-  - Assets/NetcodePlus/Demo/Models/Trap.fbx
-  - Assets/NetcodePlus/Demo/Models/AdventurerGirl.fbx
-  - Assets/NetcodePlus/Demo/Models/tower.fbx
-  - Assets/NetcodePlus/Demo/Models/Lever.fbx
-  - Assets/NetcodePlus/Demo/Models/CubeWood3.fbx
-  - Assets/NetcodePlus/Demo/Models/Slide_Door.fbx
-  - Assets/NetcodePlus/Demo/Models/Monkey_Statue.fbx
-  - Assets/NetcodePlus/Demo/Models/Foot_Switch.fbx
-  - Assets/NetcodePlus/Demo/Models/CubeWood2.fbx
-  - Assets/NetcodePlus/Demo/Models/Key.fbx
-  - Assets/NetcodePlus/Demo/Models/Key_Door.fbx
-  - Assets/FreeAssets/Wolf3D/RPM Avatar Pack/Models/Scene/BG_drop.fbx
-  uvOverlapAssetList: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000000000000010100000000000001010000010100000101000001010000010100000101000001010000010100000101000000000000
+  - Assets/Room1.fbx
+  - Assets/Room2.fbx
+  - Assets/Room3.fbx
+  - Assets/Room4.fbx
+  - Assets/StartRoom.fbx
+  - Assets/BossRoom.fbx
+  - Assets/Wall.fbx
+  - Assets/Bake/Stage/Rework/BossRoom.fbx
+  - Assets/Bake/Stage/Rework/Room1.fbx
+  - Assets/Bake/Stage/Rework/Room3.fbx
+  - Assets/Bake/Stage/Rework/Room4.fbx
+  - Assets/Bake/Stage/Rework/Wall.fbx
+  - Assets/Bake/Stage/Rework/StartRoom.fbx
+  - Assets/Bake/Stage/Rework/Room2.fbx
+  - Assets/Prefabs/Man/BaseAnimations/Man.fbx
+  - Assets/RipMuxiv/Planar Shadows/Model/Deer.fbx
+  - Assets/Arena/Prefabs/Man/BaseAnimations/crouching turn 90 left.fbx
+  - Assets/Arena/Prefabs/Man/BaseAnimations/walk forward left.fbx
+  - Assets/Arena/Prefabs/Man/BaseAnimations/sprint backward.fbx
+  - Assets/Arena/Prefabs/Enemy/NewZombieWooman/Zombie Run.fbx
+  - Assets/Arena/Prefabs/Man/BaseAnimations/jump down.fbx
+  - Assets/Arena/Prefabs/Enemy/NewZombieWooman/Drunk Run Forward.fbx
+  - Assets/Arena/Prefabs/Man/BaseAnimations/walk crouching forward.fbx
+  - Assets/Arena/Prefabs/Man/BaseAnimations/idle.fbx
+  - Assets/Arena/Prefabs/Enemy/Enemy/Zombie2.fbx
+  - Assets/Arena/Prefabs/Enemy/Enemy/NewZombieWooman/Zombie Punching (1).fbx
+  - Assets/Arena/Prefabs/Man/BaseAnimations/death from the back.fbx
+  - Assets/Arena/Prefabs/Enemy/Enemy/NewZombieWooman/Idle.fbx
+  - Assets/Arena/Prefabs/Man/BaseAnimations/death crouching headshot front.fbx
+  - Assets/Arena/Prefabs/Enemy/NewZombieMan/Zombie Idle (2).fbx
+  - Assets/Arena/Prefabs/Man/BaseAnimations/sprint forward right.fbx
+  - Assets/Arena/Prefabs/Enemy/Enemy/NewZombieMan/Running (1).fbx
+  - Assets/Arena/Prefabs/Man/BaseAnimations/sprint forward.fbx
+  - Assets/Arena/Prefabs/Man/BaseAnimations/walk backward left.fbx
+  - Assets/Arena/Prefabs/Enemy/NewZombieWooman/Idle.fbx
+  - Assets/Arena/Prefabs/Man/BaseAnimations/sprint forward left.fbx
+  - Assets/Arena/Prefabs/Man/BaseAnimations/walk backward.fbx
+  - Assets/Arena/Prefabs/Enemy/Enemy/NewZombieMan/Zombie Running (1).fbx
+  - Assets/Arena/Prefabs/Enemy/Enemy/NewZombieWooman/Zombie2 (1).fbx
+  - Assets/Arena/Prefabs/Enemy/NewZombieMan/Zombie Running (1).fbx
+  - Assets/Arena/Prefabs/Man/BaseAnimations/sprint backward right.fbx
+  - Assets/Arena/Prefabs/Enemy/Enemy/NewZombieWooman/Zombie Run.fbx
+  - Assets/Arena/Prefabs/Man/BaseAnimations/sprint backward left.fbx
+  - Assets/Arena/Prefabs/Man/BaseAnimations/run left.fbx
+  - Assets/Arena/Prefabs/Man/BaseAnimations/walk crouching backward right.fbx
+  - Assets/Arena/Prefabs/Man/BaseAnimations/run backward left.fbx
+  - Assets/Arena/Prefabs/Man/BaseAnimations/run forward left.fbx
+  - Assets/Arena/Prefabs/Enemy/NewZombieMan/Zombie Attack (1).fbx
+  - Assets/Arena/Prefabs/Man/BaseAnimations/turn 90 left.fbx
+  - Assets/Arena/Prefabs/Man/BaseAnimations/turn 90 right.fbx
+  - Assets/Arena/Prefabs/Man/BaseAnimations/walk crouching forward right.fbx
+  - Assets/Arena/Prefabs/Man/BaseAnimations/jump up.fbx
+  - Assets/Arena/Prefabs/Man/BaseAnimations/walk crouching backward left.fbx
+  - Assets/Arena/Prefabs/Man/BaseAnimations/death from back headshot.fbx
+  - Assets/Arena/Prefabs/Man/BaseAnimations/walk forward right.fbx
+  - Assets/Arena/Prefabs/Man/BaseAnimations/walk backward right.fbx
+  - Assets/Arena/Prefabs/Man/BaseAnimations/idle crouching aiming.fbx
+  - Assets/Arena/Prefabs/Man/BaseAnimations/run backward.fbx
+  - Assets/Arena/Prefabs/Man/BaseAnimations/run backward right.fbx
+  - Assets/Arena/Prefabs/Man/BaseAnimations/idle aiming.fbx
+  - Assets/Arena/Prefabs/Man/BaseAnimations/run forward.fbx
+  - Assets/Arena/Prefabs/Man/BaseAnimations/sprint right.fbx
+  - Assets/Arena/Prefabs/Man/BaseAnimations/death from the front.fbx
+  - Assets/Arena/Prefabs/Man/BaseAnimations/run forward right.fbx
+  - Assets/Arena/Prefabs/Man/BaseAnimations/sprint left.fbx
+  - Assets/Arena/Prefabs/Man/BaseAnimations/walk right.fbx
+  - Assets/Arena/Prefabs/Man/BaseAnimations/walk crouching right.fbx
+  - Assets/Arena/Prefabs/Man/BaseAnimations/walk crouching forward left.fbx
+  - Assets/Arena/Prefabs/Man/BaseAnimations/jump loop.fbx
+  - Assets/Arena/Prefabs/Man/BaseAnimations/walk crouching backward.fbx
+  - Assets/Arena/Prefabs/Man/BaseAnimations/walk forward.fbx
+  - Assets/Arena/Prefabs/Man/BaseAnimations/Man.fbx
+  - Assets/Arena/Prefabs/Man/BaseAnimations/crouching turn 90 right.fbx
+  - Assets/Arena/Prefabs/Enemy/NewZombieMan/Zombie1 (1).fbx
+  - Assets/Arena/Prefabs/Man/BaseAnimations/idle crouching.fbx
+  - Assets/Arena/Prefabs/Man/BaseAnimations/run right.fbx
+  - Assets/Arena/Prefabs/Man/BaseAnimations/walk left.fbx
+  - Assets/Arena/Prefabs/Man/BaseAnimations/death from front headshot.fbx
+  - Assets/Arena/Prefabs/Enemy/Enemy/NewZombieMan/Zombie Attack (1).fbx
+  - Assets/Arena/Prefabs/Enemy/NewZombieMan/Running (1).fbx
+  - Assets/Arena/Prefabs/Enemy/NewZombieWooman/Zombie Punching (1).fbx
+  - Assets/Arena/Prefabs/Man/BaseAnimations/walk crouching left.fbx
+  - Assets/Arena/Prefabs/Enemy/Enemy/Zombie1.fbx
+  - Assets/Arena/Prefabs/Enemy/Enemy/NewZombieMan/Zombie Idle (2).fbx
+  - Assets/Arena/Prefabs/Enemy/Enemy/NewZombieMan/Zombie1 (1).fbx
+  - Assets/Arena/Prefabs/Man/BaseAnimations/death from right.fbx
+  - Assets/Arena/Prefabs/Enemy/Enemy/NewZombieWooman/Drunk Run Forward.fbx
+  - Assets/Arena/Prefabs/Enemy/NewZombieWooman/Zombie2 (1).fbx
+  - Assets/Sci Fi Assets/Simple SciFi Gun Turret Set/Fbx/Turret 1b.FBX
+  - Assets/Sci Fi Assets/Simple SciFi Gun Turret Set/Fbx/Turret 1c.FBX
+  - Assets/Sci Fi Assets/PostProcessing/Utilities/CustomMotionTexture/Models/WheelMovecs.FBX
+  - Assets/Sci Fi Assets/Simple SciFi Gun Turret Set/Fbx/Turret 1a.FBX
+  - Assets/Sci Fi Assets/Simple SciFi Gun Turret Set/Fbx/Turret 1d.FBX
+  uvOverlapAssetList: 010100000101000001010000010100000101000000000000000000000101000001010000010100000101000000000000010100000101000000000000000000000000000000000000000000000000000000000000000000000000000000000000010100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000101000000000000000000000000000000000000000000000000000000000000000000000101000000000000010100000000000000000000010100000101000001010000000000000101000001010000
   xatlasWarningShown: 0
-  foundCompatibleSetup: 0
-  gpuName: 
-  runsNonRTX: 1
-  runsOptix5: 1
+  foundCompatibleSetup: 1
+  gpuName: NVIDIA GeForce RTX 4060 Laptop GPU
+  runsNonRTX: 0
+  runsOptix5: 0
   runsOptix6: 1
   runsOptix7: 1
   runsOIDN: 1
@@ -135,12 +199,12 @@ MonoBehaviour:
   renderSettingsHoleFilling: 0
   renderSettingsBeepOnFinish: 0
   renderSettingsExportTerrainAsHeightmap: 1
-  renderSettingsRTXMode: 0
+  renderSettingsRTXMode: 1
   renderSettingsLightProbeMode: 1
   renderSettingsClientMode: 0
   renderSettingsServerAddress: 127.0.0.1
   renderSettingsUnwrapper: 0
-  renderSettingsDenoiserType: 100
+  renderSettingsDenoiserType: 101
   renderSettingsExportTerrainTrees: 0
   renderSettingsShowPerf: 1
   renderSettingsSampleDiv: 1
@@ -154,5 +218,5 @@ MonoBehaviour:
   renderSettingsRTPVWidth: 640
   renderSettingsRTPVHeight: 360
   tagOverrides: []
-  modifiedMeshPaddingArray: 
-  modifiedMeshUnwrapperArray: 
+  modifiedMeshPaddingArray: 10000000
+  modifiedMeshUnwrapperArray: 00000000

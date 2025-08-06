@@ -2407,9 +2407,9 @@ public class ftRenderLightmap : EditorWindow//ScriptableWizard
 
                 bool isHDRP = false;
 #if UNITY_2019_1_OR_NEWER
-                if (GraphicsSettings.renderPipelineAsset != null)
+                if (GraphicsSettings.defaultRenderPipeline != null)
                 {
-                     var srpType = GraphicsSettings.renderPipelineAsset.GetType().ToString();
+                     var srpType = GraphicsSettings.defaultRenderPipeline.GetType().ToString();
                      if (srpType.Contains("HDRenderPipelineAsset"))
                      {
                         isHDRP = true;
@@ -11143,9 +11143,9 @@ public class ftRenderLightmap : EditorWindow//ScriptableWizard
 
         int maxValue = 1024;
 #if UNITY_2019_1_OR_NEWER
-        if (GraphicsSettings.renderPipelineAsset != null)
+        if (GraphicsSettings.defaultRenderPipeline != null)
         {
-             var srpType = GraphicsSettings.renderPipelineAsset.GetType().ToString();
+             var srpType = GraphicsSettings.defaultRenderPipeline.GetType().ToString();
              if (srpType.Contains("HDRenderPipelineAsset"))
              {
                 maxValue = 64000;
